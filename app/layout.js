@@ -25,7 +25,7 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <nav className="mb-5">
-          <ul className="flex gap-3">
+          <ul className="flex gap-5">
             <li>
               <Link href={"/"}>Home</Link>
             </li>
@@ -35,14 +35,16 @@ export default function RootLayout({ children }) {
             <li>
               <Link href={"/"}>Contact</Link>
             </li>
-            {/* <li>
+            <li>
               <Link href={"/blog"}>Blog</Link>
-            </li> */}
+            </li>
+            <li>
+              <Link href={"/posts"}>Posts</Link>
+            </li>
           </ul>
         </nav>
         <hr />
         {children}
-        
       </body>
     </html>
   );
