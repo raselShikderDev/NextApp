@@ -20,9 +20,7 @@ export default async function Post({ params }) {
   // const [post, comments] = await Promise.all([mypost, mycomments])
   const post = await getPost(id);
 
-  
 
-  console.log(onlyid);
 
   return (
     <div>
@@ -42,7 +40,7 @@ export async function generateStaticParams() {
   const onlyid = await postsTest;
   return onlyid.map((post) => {
     return {
-      id: post.id
+      id: post.id.toString()
     }
   }) 
 }
